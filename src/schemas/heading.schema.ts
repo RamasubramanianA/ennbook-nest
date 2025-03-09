@@ -7,7 +7,7 @@ type LeanHeading = {
   subHeadings?: Types.ObjectId[];
 };
 
-@Schema({ timestamps: true })
+@Schema({ timestamps: true, collection: 'Headings' })
 export class Heading extends Document {
   @Prop({ required: true })
   name: string;

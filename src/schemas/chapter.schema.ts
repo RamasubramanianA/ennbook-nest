@@ -2,7 +2,7 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Types } from 'mongoose';
 import { Heading } from './heading.schema';
 
-@Schema({ timestamps: true })
+@Schema({ timestamps: true, collection: 'Chapters' })
 export class Chapter extends Document {
   @Prop({ required: true })
   name: string;

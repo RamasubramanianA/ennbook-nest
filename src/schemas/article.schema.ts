@@ -8,7 +8,7 @@ export class Content {
   text: string;
 }
 
-@Schema({ timestamps: true })
+@Schema({ timestamps: true, collection: 'Articles' })
 export class Article extends Document {
   @Prop({ type: Content, required: true })
   contents: Content;
