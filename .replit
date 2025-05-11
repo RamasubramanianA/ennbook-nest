@@ -6,3 +6,18 @@ channel = "stable-24_05"
 
 [deployment]
 run = ["sh", "-c", "npm run start:dev"]
+
+[[ports]]
+localPort = 3000
+externalPort = 80
+
+[workflows]
+
+[[workflows.workflow]]
+name = "Debug"
+author = 42355878
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm run start:debug"
